@@ -121,9 +121,9 @@ const createPriceTagIcon = (price: string, iconType: string) => {
   return L.divIcon({
     className: "custom-price-tag",
     html: `
-      <div class="flex flex-row items-center gap-0.5 bg-white border-[1px] rounded-full px-2 py-0 shadow-sm transform -translate-x-1/2 -translate-y-1/2 hover:scale-110 transition-transform" style="border-color: ${borderColor}">
-        <span class="text-[7px] leading-none">${iconEmoji}</span>
-        <span class="text-[8px] font-bold text-[#1A1A1A] whitespace-nowrap leading-none">${priceValue}</span>
+      <div class="flex flex-row items-center gap-1 bg-white border-[1.5px] rounded-full px-2.5 py-1 shadow-md transform -translate-x-1/2 -translate-y-1/2 hover:scale-110 transition-transform" style="border-color: ${borderColor}">
+        <span class="text-[10px] leading-none">${iconEmoji}</span>
+        <span class="text-[11px] font-bold text-[#1A1A1A] whitespace-nowrap leading-none">${priceValue}</span>
       </div>
     `,
     iconSize: [0, 0],
@@ -349,7 +349,7 @@ export default function App() {
               <button
                 onClick={() => setIsPriceFilterOpen(!isPriceFilterOpen)}
                 className={cn(
-                  "flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-bold border transition-all shadow-sm bg-white/90 backdrop-blur-md",
+                  "flex items-center gap-1 px-2.5 py-1.5 rounded-full text-[11px] font-bold border transition-all shadow-sm bg-white/90 backdrop-blur-md",
                   maxPrice < 10000 ? "border-[#FF6B00] text-[#FF6B00]" : "border-gray-200 text-gray-500"
                 )}
               >
@@ -395,7 +395,7 @@ export default function App() {
                     setCategory(tag);
                     handleSearch();
                   }}
-                  className="whitespace-nowrap bg-white/80 backdrop-blur-md px-2 py-1 rounded-full text-[9px] font-bold border border-gray-200 shadow-sm hover:border-[#FF6B00] hover:text-[#FF6B00] transition-all"
+                  className="whitespace-nowrap bg-white/80 backdrop-blur-md px-2.5 py-1.5 rounded-full text-[11px] font-bold border border-gray-200 shadow-sm hover:border-[#FF6B00] hover:text-[#FF6B00] transition-all"
                 >
                   #{tag}
                 </button>
